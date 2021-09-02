@@ -4,8 +4,10 @@ p {
   text-align:center;
 }
 
-table {style="color:white;"}
+table {
+  color:white;
+}
 
-form {style="border:2px solid DodgerBlue;"}
+form {border:2px solid DodgerBlue;}
 
  body {background-image: url("Vines.jpg");}
