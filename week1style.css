@@ -1,6 +1,8 @@
 /*mystyle.css*/
-p {style="color:white;"}
-p {text-align:center;}
+p {
+  style="color:white;"
+  text-align:center;
+}
 
 table {style="color:white;"}
 
