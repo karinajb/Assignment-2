@@ -18,6 +18,10 @@ form {
     #wrapper {width:80%;
               margin-left:auto;
               margin-right:auto;}
+    header {background-colour:lightgreen;
+            padding-top:20px;
+            padding-bottom:20px;
+      padding-right:155px;}
     
     div {column-count:2;
      column-gap:10px;
@@ -27,4 +31,7 @@ form {
 
 nav {float:right;
         width:150px;}
-      #leftcol {margin-right:155px;}
+
+      #leftcol {margin-right:155px;
+                margin-top:0px;
+                padding:10px;}
