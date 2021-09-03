@@ -15,12 +15,3 @@ form {
 
  body {background-image: url("Vines.jpg");}
 
-div {column-count:2;
-     column-gap:10px;
-      column-rule-style:solid;
-      column-rule-width:1px;
-      column-rule-colour:red;}
-
-nav {float:right;
-        width:150px;}
-      #leftcol {margin-right:155px;}
