@@ -76,14 +76,14 @@
     
     <form action="/action_page.php">
       <label for="standarddrinks">How many bottles of wine?:</label><br>
-      <input type="text" id="drinks" value="4"><br><br>
+      <input type="text" id="drinks" value="7"><br><br>
       <input type="button" value="Wine Time" onclick="calculatedrinks()">
     </form>
 
     <script>
       function calculatedrinks(){
         var textbox = document.getElementById('drinks');
-        float b = Float.parseFloat(textbox.value);
+        var b = Float.parseFloat(textbox.value);
       window.alert(b);
 
     }
