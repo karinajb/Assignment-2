@@ -66,6 +66,11 @@
       <input type="text" id="dogname" value="Luna"><br><br>
       <input type="button" value="Submit" onclick="welcomedog()">
     </form>
+    <script>
+      function welcomedog(){
+      window.alert("Welcome, come enjoy the winery as we are dog friendly");
+      }
+    </script>
     
  <img src="Luna1_DSC_5054.jpg" style="width:491px;height:736px;">
     
@@ -75,19 +80,17 @@
       <input type="button" value="Wine Time" onclick="calculatedrinks()">
     </form>
 
+    <script>
+      function calculatedrinks(){
+      float b = Float.parseFloat(drinks.getText);
+      float d = 7.4*b;
+      window.alert(d);
+      window.alert("finished");
+    }
+  </script>
     
   </body>
-<script>
-  function welcomedog(){
-    window.alert("Welcome, come enjoy the winery as we are dog friendly");
-  }
-  
-  function calculatedrinks(){
-  float b = Float.parseFloat(drinks.getText);
-    float d = 7.4*b;
-    window.alert(d);
-  }
-  </script>
+
      
 </html>
 
