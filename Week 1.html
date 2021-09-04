@@ -69,12 +69,23 @@
     
  <img src="Luna1_DSC_5054.jpg" style="width:491px;height:736px;">
     
+    <form action="/action_page.php">
+      <label for="standarddrinks">How many bottles of wine?:</label><br>
+      <input type="text" id="drinks" value="6"><br><br>
+      <input type="button" value="Wine Time" onclick="calculatedrinks()">
+    </form>
 
     
   </body>
 <script>
   function welcomedog(){
     window.alert("Welcome, come enjoy the winery as we are dog friendly");
+  }
+  
+  function calculatedrinks(){
+  float b = Float.parseFloat(drinks.getText);
+    float d = 7.4*b;
+    window.alert(d);
   }
   </script>
      
