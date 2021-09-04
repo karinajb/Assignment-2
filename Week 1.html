@@ -76,7 +76,7 @@
     
     <form action="/action_page.php">
       <label for="standarddrinks">How many bottles of wine?:</label><br>
-      <input type="text" id="drinks" value="9"><br><br>
+      <input type="text" id="drinks" value="11"><br><br>
       <input type="button" value="Wine Time" onclick="calculatedrinks()">
     </form>
 
@@ -85,7 +85,8 @@
         var textbox = document.getElementById('drinks');
         var b = parseFloat(textbox.value);
         var d = 7.4*b;
-      window.alert(d);
+        String boozey = "That would be " + d + " standard drinks";
+      window.alert(boozey);
 
     }
   </script>
