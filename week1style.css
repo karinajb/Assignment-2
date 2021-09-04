@@ -37,8 +37,15 @@ form {
 nav {
   float:right;
   width:150px;
-   color:white;
+   
 }
+
+ul {
+  color:white;
+  font-weight:bold;
+  list-style-type:none;
+}
+
 
 #leftcol {
   margin-right:155px;
