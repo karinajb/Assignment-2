@@ -16,6 +16,14 @@
   padding: 20px;
 }
 
+nav {
+  float:right;
+  width:150px;
+  background: rgba(0, 0, 0, 0.25);
+  color: #f1f1f1;
+   
+}
+
 /* Style the button used to pause/play the video */
 #myBtn {
   width: 200px;
@@ -32,8 +40,4 @@
   color: black;
 }
     
-nav {
-  float:right;
-  width:150px;
-   
-}
+
