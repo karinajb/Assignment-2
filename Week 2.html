@@ -2,7 +2,7 @@ This is my index for my week 2 task
 
 <html>
 <head>
-<title>Karina's Test Webpage V2.4</title>
+<title>Karina's Test Webpage V2.5</title>
 <link href="week2style.css" rel="stylesheet">
   
 </head>
@@ -28,6 +28,14 @@ This is my index for my week 2 task
   <!-- Use a button to pause/play the video with JavaScript -->
   <button id="myBtn" onclick="myMnu()">-Menu-</button>
   <button id="myBtn" onclick="myFunction()">Pause</button>
+  
+  <div id="map"></div>
+
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmEeLM9-A24eFrV6NldUfbvbA5sIKlfwI&callback=initMap&libraries=&v=weekly"
+      async
+    ></script>
 </div>
 
   
@@ -61,4 +69,21 @@ function myFunction() {
   }
 }
 </script>
+  <script>
+      // Initialize and add the map
+      function initMap() {
+        // The location of Uluru
+        const uluru = { lat: -38.2064419, lng: 144.2961895 };
+        // The map, centered at Uluru
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 4,
+          center: uluru,
+        });
+        // The marker, positioned at Uluru
+        const marker = new google.maps.Marker({
+          position: uluru,
+          map: map,
+        });
+      }
+    </script>
 </html>
