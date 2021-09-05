@@ -2,7 +2,7 @@ This is my index for my week 2 task
 
 <html>
 <head>
-<title>Karina's Test Webpage V2.6</title>
+<title>Karina's Test Webpage V2.7</title>
 <link href="week2style.css" rel="stylesheet">
   
 </head>
@@ -29,15 +29,16 @@ This is my index for my week 2 task
   <button id="myBtn" onclick="myMnu()">-Menu-</button>
   <button id="myBtn" onclick="myFunction()">Pause</button>
   
- 
-</div>
- <div id="map"></div>
+  <div id="map"></div>
 
     <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
     <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmEeLM9-A24eFrV6NldUfbvbA5sIKlfwI&callback=initMap&libraries=&v=weekly"
+     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&libraries=&v=weekly&channel=2"
       async
     ></script>
+ 
+</div>
+ 
   
   <div class="navig">
     <nav>
@@ -73,7 +74,7 @@ function myFunction() {
       // Initialize and add the map
       function initMap() {
         // The location of Uluru
-        const uluru = { lat: -38.2064419, lng: 144.2961895 };
+  const uluru = { lat: -25.344, lng: 131.036 };
         // The map, centered at Uluru
         const map = new google.maps.Map(document.getElementById("map"), {
           zoom: 4,
