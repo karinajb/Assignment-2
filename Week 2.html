@@ -1,0 +1,123 @@
+
+<html>
+  
+
+  
+  <head>
+    <title> Karina's Test Webpage </title>
+    <link href="week2style.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+      
+  </head>
+  <body>
+    
+    <div id="wrapper">
+  <header>
+    Karina's Assignment 1 Winery Website
+  </header>
+  <nav>
+  <ul>
+    <li>Wine</li>
+    <li>Restaurant</li>
+    <li>Events</li>
+    <li>Contact</li>
+  </ul>
+  </nav>
+    
+  <div id="leftcol">
+    <main>
+      <p> Beautiful and small winery located in Waurn Ponds offering small batch wine and shared food </p>
+    </main>
+  </div>
+    </div>
+  
+  
+    <p> Karina's test paragraph </p> 
+    <p> Another paragraph example </p>
+    
+    
+    
+
+      
+      <table>
+  <tr>
+    <th>Wine Variety</th>
+    <th>Region</th> 
+    <th>Price</th>
+  </tr>
+  <tr>
+    <td>Pinot Noir</td>
+    <td>Moorabool Valley</td> 
+    <td>$30</td>
+  </tr>
+  <tr>
+    <td>Rose</td>
+    <td>Surfcoast</td> 
+    <td>$35</td>
+  </tr>
+    <tr>
+    <td>Chardonnay</td>
+    <td>Bellarine Peninsula</td> 
+    <td>$25</td>
+  </tr>
+</table>
+    
+    <form action="/action_page.php">
+      <label for="dogname">What is your dog's name?:</label><br>
+      <input type="text" id="dogname" value="Luna"><br><br>
+      <input type="button" value="Submit" onclick="welcomedog()">
+    </form>
+    <script>
+      function welcomedog(){
+      window.alert("Welcome, come enjoy the winery as we are dog friendly");
+      }
+    </script>
+    
+ <img src="Luna1_DSC_5054.jpg" style="width:491px;height:736px;">
+    
+    <form action="/action_page.php">
+      <label for="standarddrinks">How many bottles of wine?:</label><br>
+      <input type="text" id="drinks" value="7"><br><br>
+      <input type="button" value="Wine Time" onclick="calculatedrinks()">
+    </form>
+
+    <script>
+      function calculatedrinks(){
+        var textbox = document.getElementById('drinks');
+        var b = parseFloat(textbox.value);
+        var d = 7.4*b;
+        var boozey = "That would be " + d + " standard drinks";
+      window.alert(boozey);
+
+    }
+  </script>
+    
+    <div id="app-1">
+      <ol>
+        <li v-for="todo in todos">
+          {{ todo.text }}
+        </li>
+      </ol>
+    </div>
+    
+    <script>
+      var app1 = new Vue({
+        el: '#app-1',
+        data: {
+          todos: [
+            { text: 'Buy Wine' },
+            { text: 'Pour Wine' },
+            { text: 'Drink Wine' },
+            { text: 'Enjoy Wine' },
+            ]
+        }
+      })
+    </script>
+    
+
+    
+  </body>
+
+     
+</html>
+
