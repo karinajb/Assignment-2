@@ -73,16 +73,16 @@ function myFunction() {
   <script>
       // Initialize and add the map
       function initMap() {
-        // The location of Uluru
-        const uluru = { lat: -38.2064419, lng: 144.2961895 };
-        // The map, centered at Uluru
+        // The location of winery
+        const winery = { lat: -38.2064419, lng: 144.2961895 };
+        // The map, centered at winery
         const map = new google.maps.Map(document.getElementById("map"), {
           zoom: 4,
-          center: uluru,
+          center: winery,
         });
-        // The marker, positioned at Uluru
+        // The marker, positioned at winery
         const marker = new google.maps.Marker({
-          position: uluru,
+          position: winery,
           map: map,
         });
       }
