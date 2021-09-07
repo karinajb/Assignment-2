@@ -37,5 +37,18 @@
     })
     </script>
     
+    <div id="app-magic">
+      <span v-if="seen">Now you can see me</span>
+    </div>
+    
+    <script>
+      var appmagic = new Vue({
+        el: '#app-magic',
+        data: {
+          seen: true
+        }
+      })
+    </script>
+    
   </body>
 </html>
