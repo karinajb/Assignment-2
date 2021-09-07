@@ -50,5 +50,28 @@
       })
     </script>
     
+    <div id="applist">
+      <ol>
+        <li v-for"todo in todos">
+          {{ todo.text }}
+        </li>
+      </ol>
+    </div>
+    
+    <script>
+      var applist = new Vue({
+        el: '#app-list',
+        data: {
+          todos: [
+            { text: 'Choose wine' },
+            { text: 'Buy wine' },
+            { text: 'Pour wine' },
+            { text: 'Drink wine' },
+            { text: 'Enjoy wine' }
+            ]
+        }
+      })
+    </script>
+    
   </body>
 </html>
