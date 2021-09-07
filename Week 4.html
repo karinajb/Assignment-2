@@ -21,5 +21,21 @@
         }
       })
     </script>
+    
+    <div id="app-hover">
+      <span v-bind:title="message">
+        Hover your mouse over me for a few seconds to see Karina's dynamically bound title!
+      </span>
+    </div>
+    
+    <script>
+    var apphover = new Vue({
+    el: '#app-hover',
+    data: {
+    message: 'You loaded this page on ' + new Date(). toLocaleString()
+    }
+    })
+    </script>
+    
   </body>
 </html>
