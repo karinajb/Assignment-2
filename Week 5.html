@@ -1,2 +1,42 @@
 <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 
+<html>
+  <head>
+    <title> Week 5 Vue </title>
+    
+    
+  </head>
+  
+  <body>
+    <div id="app-winetodo">
+      <ol>
+        <winetodo-item
+                       v-for="item in winemakingList"
+                       v-bind:winetodo="item"
+                       v=bind:key="item.id"
+                       >
+          </winetodo-item>
+      </ol>
+    </div>
+    <script>
+      Vue.component('winetodo-item', {
+        props: ['winetodo'],
+        template: '<li> {{ winetodo.text }}</li>'
+      })
+      
+      var appwinetodo = new Vue({
+        el: '#app-winetodo',
+        data: {
+          winemakingList: [
+            { id:0, text: 'Pick grapes' },
+            { id:1, text: 'Crush grapes' },
+            { id:2, text: 'Ferment grapes' },
+            { id:3, text: 'Bottle wine' },
+            { id:4, text: 'Drink wine' }
+            ]
+        }
+      })
+        
+    </script>
+  </body>
+</html>
