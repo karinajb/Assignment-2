@@ -38,5 +38,25 @@
       })
         
     </script>
+    
+    <div id="app-reverse">
+      <p> {{ message }} </p>
+      <button v-one:click="reverseMessage">Flip It</button>
+    </div>
+    
+    <script>
+      var appreverse = new Vue({
+        el: '#app-reverse',
+        data: {
+          message: 'Drink Responsibly!'
+        },
+        methods: {
+          reverseMessage: function () {
+            this.message = this.message.split('').reverse().join('')
+          }
+        }
+      })
+      
+    </script>
   </body>
 </html>
