@@ -51,5 +51,30 @@
         })          
       
     </script>
+    
+    <div id="checkboxes">
+      <input type="checkbox" id="18" value="Iam18" v-model="userconditions" />
+      <label for="Iam18">I confirm that I am 18 years or older</label>
+      <input type="checkbox" id="terms" value="terms" v-model="userconditions" />
+      <label for="terms">I agree to the terms and conditions</label>
+      <input type="checkbox" id="maillist" value="maillist" v-model="userconditions" />
+      <label for="maillist">Please add me to your mailing list for new wine releases</label>
+      <br>
+      <span>Agreed to: {{ userconditions }}</span>
+    
+    </div>
+    
+    <script>
+    var app = new Vue({
+      el: "#checkboxes",
+      data: {
+        userconditions:[],
+      }
+    })
+        
+        
+    
+    </script>
+    
   </body>
 </html>
