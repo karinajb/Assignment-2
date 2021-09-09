@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title>Karina's week 7 vue tasks</title> 
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="tastingnote">
+    </div>
+    <script>
+      Vue.component('tasting', {
+        template: '<div><p>${message}</p>
+        <button @click="Press">Tasting notes</button></div>',
+        delimiters: ['${','}'],
+                    data: function(){
+        return {
+          message: 'Press for tasting notes'
+        }
+      },
+        methods: {
+          Press: function(){
+            alert('Full bodied, notes of jasmine and crisp apples');
+          }
+        }
+      });
+      
+      let vm = new Vue({
+        el:'#tastingnote',
+        template: '<'tasting/>'
+      });
+          
+    </script>
+  </body>
+</html>
