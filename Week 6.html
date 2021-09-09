@@ -65,7 +65,7 @@
       <br>
       <select v-model="filterby">
         <option v-for="filtercategory in filterlist"
-                v-bing:value="filtercategory.value">{{filtercategory.text}}
+                v-bind:value="filtercategory.value">{{filtercategory.text}}
         </option>
       </select>
     
