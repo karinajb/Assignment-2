@@ -63,13 +63,16 @@
       <span>Agreed to: {{ userconditions }}</span>
       <br>
       <br>
+      
+      
       Filter wine available by type:
       <select v-model="filterby">
         <option v-for="filtercategory in filterlist"
                 v-bind:value="filtercategory.value">{{filtercategory.text}}
         </option>
       </select>
-    
+    <span>Showing category: {{ filterby }}
+      </span>
     </div>
     
     <script>
@@ -93,6 +96,8 @@
         
     
     </script>
+    
+    
     
   </body>
 </html>
