@@ -4,30 +4,54 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
   </head>
   <body>
-    <div id="tastingnote">
+    <div id="wineapp">
+      <store-component
+                       v-bind:title="title"
+                       v-bind:price="price"
+                       v-bind:description="description"
+                       ></store-component>
+      <store-component
+                       v-bind:title="title"
+                       v-bind:price="price"
+                       v-bind:description="description"
+                       v-on:add-tocart="addToCart"
+                       ></store-component>      
     </div>
     <script>
-      Vue.component('tasting', {
-        template: '<div><p>${message}</p>
-        <button @click="Press">Tasting notes</button></div>',
-        delimiters: ['${','}'],
-                    data: function(){
-        return {
-          message: 'Press for tasting notes'
-        }
-      },
-        methods: {
-          Press: function(){
-            alert('Full bodied, notes of jasmine and crisp apples');
-          }
-        }
-      });
+      Vue.component("store-component",{
+        props:{
+        title:String,
+          price:Number,
+          description:String,
+        },
+        template:'<div><p><storeComponent></storeComponent></p> \
+      <h3>{{title}} ${{price}}</h3>{{description}} \
+<button v-on:click="$emit(\'addtocart\')">Add to Cart</button> \
+      </div>'
+      })
       
-      let vm = new Vue({
-        el:'#tastingnote',
-        template: '<'tasting/>'
-      });
-          
+      var wineapp = new Vue({
+      el: "#wineapp",
+        data: {
+          title:'2020 Nicols Paddock Estate Shiraz',
+          price:35,
+          description:'Hand picked estate grown Shiraz',
+          pinot: {
+            title:'2020 Nicols Paddock Pinot Noir',
+            price:30,
+            description:'Made with fruit sourced from the Moorabool Valley',
+            
+          },
+        },
+        
+        methods: {
+        addToCart: function() {
+        alert("Added to Cart");
+        },
+        },
+      })
+      
+      
     </script>
   </body>
 </html>
