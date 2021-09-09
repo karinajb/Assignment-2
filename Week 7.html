@@ -18,6 +18,45 @@
       
       <component-local></component-local>
     </div>
+    
+    <div id="wine-variety">
+      <p>Year: {{year}}</p>
+      <p>Varital: {{varital}}</p>
+      <wine-builder v-model:wine-year="year" v-model:wine-varital="varital"></wine-builder> 
+         
+         </div>
+    
+    <script>
+    const WineName= {
+    props: {
+      year: String,
+      varital: String,
+    },
+      template:'
+      <input type="text":value="year" @input="$emit('update:year', $event.target.value)">
+      <input type="text":value="varital" @input="$emit('update:varital', $event.target.value)">
+      '
+    };
+      
+    const WineBuildApp = {
+      components: {
+        WineName,
+      },
+      data(){
+        return{
+          year: '2020',
+          varital: 'Shiraz',
+        };
+      },
+    };
+      
+      Vue.createApp(WineBuildApp).mount('#wineapp')
+      
+    </script>
+    
+    
+    
+    
     <script>
       Vue.component("store-component",{
         props:{
