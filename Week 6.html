@@ -1,5 +1,54 @@
 <html>
   <head>
     <title>Karina's week 6 vue tasks</title> 
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
   </head>
+  <body>
+    <div id="storelogin">
+      <form id="loginform">
+      <h1>Login to our online store</h1>
+      <label for="name">Username:</label>
+    <input id="name" v-model.trim="login" type="text" placeholder="Enter username">
+      <br>
+      
+      <label for="password">Password: </label>
+      <input id="password" v-model="password" type="password" placeholder="Enter password">
+      <br>
+      <label for="email">Email: </label>
+      <input id="email" v-model="email" type="text" placeholder="Enter your email">
+      <br>
+      <button v-on:click="checkInput">Login</button>
+      </form>
+    </div>
+    
+    <script>
+      var form = new Vue({
+        el:"loginform",
+        data:{
+          name:'',
+          password:'',
+          email:'',
+        },
+        methods: {
+          checkInput: function() {
+            var str ='';
+            if (this.name){
+              str = str + "name:" + this.name;
+            }
+            if (this.password) {
+              str = str + "password: " + this.password;
+            }
+            if (this.email) {
+              str = str + "email: " + this.email;
+            }
+            if (str) {
+              alert(str)
+            } else {
+              alert("Please enter your required details")
+            }
+          }
+        })          
+      
+    </script>
+  </body>
 </html>
