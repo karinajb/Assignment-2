@@ -61,6 +61,13 @@
       <label for="maillist">Please add me to your mailing list for new wine releases</label>
       <br>
       <span>Agreed to: {{ userconditions }}</span>
+      <br>
+      <br>
+      <select v-model="filterby">
+        <option v-for="filtercategory in filterlist"
+                v-bing:value="filtercategory.value">{{filtercategory.text}}
+        </option>
+      </select>
     
     </div>
     
@@ -69,6 +76,16 @@
       el: "#checkboxes",
       data: {
         userconditions:[],
+        
+        filtercategory: [
+          { text: 'Choose a wine variety', value: 'C'},
+          { text: 'Red', value: 'R' },
+          { text: 'White', value: 'W' },
+          { text: 'Sparkling', value: 'S' },
+          { text: 'Rose', value: 'P' }
+          ],
+        filterby:'C',
+          
       }
     })
         
