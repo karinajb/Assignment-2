@@ -11,11 +11,10 @@
                        v-bind:description="description"
                        ></store-component>
       <store-component
-                       v-bind:title="title"
-                       v-bind:price="price"
-                       v-bind:description="description"
-                       v-on:add-tocart="addToCart"
-                       ></store-component>      
+                       v-bind:title="pinot.title"
+                       v-bind:price="pinot.price"
+                       v-bind:description="pinot.description"
+                       v-on:add-tocart="addToCart"></store-component>      
     </div>
     <script>
       Vue.component("store-component",{
