@@ -14,7 +14,9 @@
                        v-bind:title="pinot.title"
                        v-bind:price="pinot.price"
                        v-bind:description="pinot.description"
-                       v-on:add-tocart="addToCart"></store-component>      
+                       v-on:add-tocart="addToCart"></store-component> 
+      
+      <component-local></component-local>
     </div>
     <script>
       Vue.component("store-component",{
@@ -31,6 +33,10 @@
 Vue.component("StoreComponent",{
 template:"<p>Item</p>",
 })
+     
+var componentMSG= {
+template: "<p>End of item</p>
+}
       
       var wineapp = new Vue({
       el: "#wineapp",
@@ -44,6 +50,9 @@ template:"<p>Item</p>",
             description:'Made with fruit sourced from the Moorabool Valley',
             
           },
+        },
+        components:{
+        "component-local": componentL,
         },
         
         methods: {
